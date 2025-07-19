@@ -485,7 +485,7 @@
         </ul>
 
         <p>Thank you all. If you follow the rules, everyone will benefit.</p>
-        <button class="btn" onclick="hideRolesAndShowLogin()" style="margin-top: 20px;">Back</button>
+        <button class="btn" onclick="window.history.back()" style="margin-top: 20px;">Back</button>
       </div>
     </div>
 
@@ -959,14 +959,8 @@
     showTab('roles');
   }
 
-  /**
-   * Hides the Roles & Rules section and returns to the login page.
-   */
-  function hideRolesAndShowLogin() {
-    document.getElementById('appSections').style.display = 'none';
-    document.getElementById('auth').style.display = 'block';
-    showAuthTab('login');
-  }
+  // NOTE: The `hideRolesAndShowLogin` function is now removed.
+  // The 'Back' button now uses `window.history.back()` directly.
 
   // --- App Section & Stats Display Functions ---
 
